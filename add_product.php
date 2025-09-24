@@ -51,6 +51,7 @@
 
             <button type="submit" name="save">Guardar</button>
         </form>
+        <p><a href="javascript:history.back()">Volver</a></p>
     </div>
 </body>
 </html>

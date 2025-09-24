@@ -25,14 +25,12 @@
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required><br>
 
-            <label for="role">Rol:</label>
-            <select id="role" name="role">
-                <option value="1">Admin</option>
-                <option value="2">Client</option>
-            </select><br>
+            
 
             <button type="submit" name="register">Registrar</button>
         </form>
+        <p>¿Ya tienes cuenta? <a href="login.php">Inicia sesión aquí</a></p>
+        <p><a href="javascript:history.back()">Volver</a></p>
 
         <?php
         if (isset($_POST['register'])) {
@@ -40,7 +38,7 @@
             $email = $_POST['email'];
             $phone = $_POST['phone'];
             $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            $role = $_POST['role'];
+            $role = 2; // Always assign Client role
 
             $stmt = $conn->prepare("INSERT INTO users (name, email, phone, password, role_id) VALUES (?, ?, ?, ?, ?)");
             $stmt->bind_param("ssssi", $name, $email, $phone, $password, $role);

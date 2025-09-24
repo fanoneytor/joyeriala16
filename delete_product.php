@@ -32,6 +32,7 @@
         } else {
             echo "ID de producto no especificado.";
         }
+        echo "<p><a href=\"javascript:history.back()\">Volver</a></p>";
         ?>
     </div>
 </body>

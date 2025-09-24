@@ -69,6 +69,7 @@
 
                 <button type="submit" name="update">Actualizar</button>
             </form>
+            <p><a href="javascript:history.back()">Volver</a></p>
         <?php else: ?>
             <p>Producto no encontrado.</p>
         <?php endif; ?>

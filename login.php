@@ -22,6 +22,8 @@
 
             <button type="submit" name="login">Ingresar</button>
         </form>
+        <p>¿No tienes cuenta? <a href="register.php">Regístrate aquí</a></p>
+        <p><a href="javascript:history.back()">Volver</a></p>
 
         <?php
         if (isset($_POST['login'])) {
