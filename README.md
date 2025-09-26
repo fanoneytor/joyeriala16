@@ -1,8 +1,84 @@
-# Joyería La 16
+# 🌐 Proyecto Web en InfinityFree – [Marketplace - Joyería]
+
+## 👥 Integrantes y Roles
+
+- [Stefano Arias] – Líder / Coordinador
+- [Jorge Iván Hurtado] – Desarrollador Backend
+- [Fabián Morales] – Desarrollador Frontend / UI
+- [Daniel Pérez] – Desarrollador Backend
+- [Santiago Correa] – Desarrollador Frontend / UI
+- [Andrés Castro] – Desarrollador Backend
+- [Federico Gómez] – Administrador de Base de Datos (DBA)
+- [Samuel Acevedo] – DevOps / Deployment
+- [Mario Florez] – QA / Tester
+- [Gustavo Piedrahita] – Documentador / Presentador
+
+## 📖 Descripción del Proyecto
 
 Este es un sistema web básico para la gestión de productos de una joyería, con funcionalidades de autenticación de usuarios y roles (Administrador y Cliente).
 
+## 🚀 Instrucciones de Uso
+
+1. Subir los archivos a la carpeta `htdocs` o `public_html` en InfinityFree.
+2. Configurar la conexión en `db_connect.php` con:
+   - Host: `sqlXXX.epizy.com`
+   - Usuario: `[usuario asignado]`
+   - Contraseña: `[contraseña asignada]`
+   - Nombre de la base de datos: `[db asignada]`
+3. Ingresar al sitio desde la URL pública:  
+   👉 [https://joyeriala16.free.nf]
+
+## 🖼️ Evidencias de Despliegue
+
+- URL del sitio: [https://joyeriala16.free.nf]
+- Captura de phpMyAdmin mostrando ≥3 registros (`capturas/phpmyadmin.png`)
+- Captura del File Manager con archivos subidos (`capturas/filemanager.png`)
+- Captura del sitio funcionando (`capturas/sitio.png`)
+
+## 📂 Archivos Entregados
+
+- `codigo.zip` – Código completo del proyecto
+- `dump.sql` – Base de datos exportada
+- `qa-report.md` – Reporte de pruebas realizadas
+- Carpeta `capturas/` – Evidencias gráficas
+
+## 📝 Changelog (registro de cambios)
+
+- [Nombre] – Implementó validaciones y seguridad con prepared statements.
+- [Nombre] – Mejoró la interfaz y organizó assets en carpeta `static/`.
+- [Nombre] – Configuró la base de datos y generó `dump.sql`.
+- [Nombre] – Subió el proyecto al hosting InfinityFree.
+- [Nombre] – Realizó pruebas QA y documentó resultados.
+- [Nombre] – Redactó README.md y preparó presentación.
+
+## ❓ Preguntas de Reflexión (Cloud)
+
+1. ¿Qué es despliegue y cómo lo hicieron en este proyecto?
+
+   > Respuesta aquí
+
+2. ¿Qué limitaciones encontraron en InfinityFree?
+
+   > Respuesta aquí
+
+3. ¿Qué servicio equivalente usarían en AWS, Azure o GCP para:
+
+   - Archivos estáticos
+   - Base de datos
+   - Hosting del sitio
+     > Respuesta aquí
+
+4. ¿Cómo resolverían escalabilidad y alta disponibilidad en la nube?
+
+   > Respuesta aquí
+
+5. Plan de migración en 4–5 pasos desde InfinityFree hacia un servicio en la nube.
+   > Respuesta aquí
+
+# README Viejo
+
 ## Tabla de Contenidos
+
 - [Características](#características)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Configuración del Proyecto](#configuración-del-proyecto)
@@ -13,12 +89,14 @@ Este es un sistema web básico para la gestión de productos de una joyería, co
 - [Estructura del Proyecto](#estructura-del-proyecto)
 
 ## Características
+
 - Autenticación de usuarios (registro, inicio de sesión, cierre de sesión).
 - Roles de usuario: Administrador y Cliente.
 - Gestión de productos (añadir, editar, eliminar) para administradores.
 - Visualización de productos para clientes.
 
 ## Tecnologías Utilizadas
+
 - **Backend:** PHP
 - **Base de Datos:** MySQL
 - **Frontend:** HTML, CSS
@@ -26,7 +104,9 @@ Este es un sistema web básico para la gestión de productos de una joyería, co
 ## Configuración del Proyecto
 
 ### Requisitos Previos
+
 Asegúrate de tener instalado lo siguiente en tu entorno de desarrollo:
+
 - Servidor web (por ejemplo, Apache, Nginx)
 - PHP (versión 7.4 o superior recomendada)
 - MySQL o MariaDB
@@ -105,6 +185,7 @@ Asegúrate de tener instalado lo siguiente en tu entorno de desarrollo:
 5.  **Administrador:** Si deseas un usuario administrador, puedes modificar el `role_id` del usuario directamente en la tabla `users` de tu base de datos a `1` (que corresponde al rol `ADMIN`).
 
 ## Estructura del Proyecto
+
 - `add_product.php`: Formulario y lógica para añadir nuevos productos (solo administradores).
 - `config.php`: Archivo de configuración de la base de datos.
 - `delete_product.php`: Lógica para eliminar productos (solo administradores).
