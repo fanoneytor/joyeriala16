@@ -39,7 +39,7 @@
             $quantity = $_POST['quantity'];
 
             $stmt = $conn->prepare("UPDATE products SET name=?, category=?, unit_cost=?, quantity=? WHERE id=?");
-            $stmt->bind_param("ssdis", $name, $category, $unit_cost, $quantity, $id);
+            $stmt->bind_param("ssdii", $name, $category, $unit_cost, $quantity, $id);
 
             if ($stmt->execute() === TRUE) {
                 echo "Producto actualizado. <a href='home.php'>Volver</a>";
