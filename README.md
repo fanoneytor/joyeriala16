@@ -55,25 +55,45 @@ Este es un sistema web básico para la gestión de productos de una joyería, co
 
 1. ¿Qué es despliegue y cómo lo hicieron en este proyecto?
 
-   > Respuesta aquí
+Poner un sistema informático disponible para un usuario.
+
+- Levantamiento de requerimientos y diseño del sistema
+- Identificar un proveedor y servicio para el despliegue
+- Contratar hosting, definir estructura del aplicativo, elegir y comprar un dominio
+- Inicializar y configurar una base de datos
+- Desarrollar el sistema y sus funcionalidades de acuerdo a los requerimientos
+- Cargar los archivos con el código en el servidor
+- Verificar el funcionamiento del aplicativo
 
 2. ¿Qué limitaciones encontraron en InfinityFree?
 
-   > Respuesta aquí
-
+- Solo usan FTP
+- El lenguaje de programación está limitado a PHP
+- Solo se puede usar MySQL como motor de base de datos
+- El dominio gratuito es genérico
+- No es escalable
+- La base de datos solo admite un usuario con rol administrador
+   
 3. ¿Qué servicio equivalente usarían en AWS, Azure o GCP para:
 
-   - Archivos estáticos
-   - Base de datos
-   - Hosting del sitio
-     > Respuesta aquí
-
+- Archivos estáticos en AWS S3
+- Base de datos en AWS RDS
+- Hosting del sitio en AWS en S3
+   
 4. ¿Cómo resolverían escalabilidad y alta disponibilidad en la nube?
 
-   > Respuesta aquí
+Para alta disponibilidad se puede implementar un CDN, al ser un sitio estático el CDN permite que el caché del sitio esté disponible globalmente aumentando la velocidad de carga y el acceso al sistema.
+
+También se puede usar S3 para garantizar la escalabilidad de la aplicación ya que cuenta con una funcionalidad de auto-scaling que permite que se aumente el número de servidores disponibles.
 
 5. Plan de migración en 4–5 pasos desde InfinityFree hacia un servicio en la nube.
-   > Respuesta aquí
+
+- Exportar la información registrada en la base de datos desde InfinityFree
+- Aprovisionar los servicios en el proveedor por ejemplo en AWS serían S3 para el código y RDS para la base de datos.
+- Se configuran las variables de entorno en el servicio secret manager para conectar la base de datos con el servicio de s3.
+- Importar la base de datos en RDS
+- Importar código en el servicio de S3
+- Realizar pruebas de verificación de funcionamiento
 
 # README Viejo
 
